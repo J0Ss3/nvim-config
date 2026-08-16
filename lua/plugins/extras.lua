@@ -8,4 +8,14 @@ return {
   { import = "lazyvim.plugins.extras.lang.rust" },
   { import = "lazyvim.plugins.extras.lang.clangd" },
   { import = "lazyvim.plugins.extras.lang.java" },
+
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        html = {},
+        cssls = {},
+      },
+    },
+  },
 }
