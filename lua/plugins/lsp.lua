@@ -1,0 +1,42 @@
+return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        ast_grep = {
+          cmd = { "ast-grep", "lsp" },
+          filetypes = {
+            "c",
+            "cpp",
+            "rust",
+            "go",
+            "java",
+            "python",
+            "javascript",
+            "typescript",
+            "html",
+            "css",
+            "kotlin",
+            "dart",
+            "lua",
+            "elixir",
+            "haskell",
+            "php",
+            "ruby",
+            "scala",
+            "solidity",
+            "swift",
+            "yaml",
+            "json",
+            "bash",
+            "nix",
+            "typescriptreact",
+            "javascriptreact",
+          },
+          root_dir = require("lspconfig.util").root_pattern("sgconfig.yaml", "sgconfig.yml"),
+          single_file_support = false,
+        },
+      },
+    },
+  },
+}
