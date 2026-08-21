@@ -17,4 +17,14 @@ return {
       },
     },
   },
+
+  {
+    "stevearc/conform.nvim",
+    opts = function(_, opts)
+      opts.formatters = opts.formatters or {}
+      opts.formatters.prettier = vim.tbl_deep_extend("force", opts.formatters.prettier or {}, {
+        prepend_args = { "--tab-width", "4" },
+      })
+    end,
+  },
 }

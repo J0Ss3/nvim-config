@@ -36,6 +36,17 @@ return {
           root_dir = require("lspconfig.util").root_pattern("sgconfig.yaml", "sgconfig.yml"),
           single_file_support = false,
         },
+        clangd = {
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--header-insertion=iwyu",
+            "--completion-style=detailed",
+            "--function-arg-placeholders",
+            "--fallback-style={BasedOnStyle: LLVM, IndentWidth: 4}",
+          },
+        },
       },
     },
   },
