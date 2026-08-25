@@ -6,3 +6,12 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- Show ``` fences in markdown (treesitter conceals the whole delimiter line at conceallevel 2)
+vim.api.nvim_create_autocmd("FileType", {
+  group = vim.api.nvim_create_augroup("markdown_conceal", { clear = true }),
+  pattern = { "markdown" },
+  callback = function()
+    vim.opt_local.conceallevel = 0
+  end,
+})

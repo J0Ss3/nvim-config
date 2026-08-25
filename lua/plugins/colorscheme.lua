@@ -11,19 +11,16 @@ return {
   { "rebelot/kanagawa.nvim" },
   { "ayu-theme/ayu-vim" },
   { "nuvic/flexoki-nvim", name = "flexoki" },
-  { "wtfox/luna.nvim", lazy = false, priority = 1000, opts = {} },
+  { "wtfox/luna.nvim", lazy = true, priority = 1000, opts = {} },
 
   { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
   {
     "yorik1984/newpaper.nvim",
-    priority = 1000,
-    config = function()
-      require("newpaper").setup({ style = "dark" })
-      vim.cmd("colorscheme newpaper")
-    end,
+    lazy = true,
+    opts = { style = "dark" },
   },
   {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "gruvbox" },
+    opts = { colorscheme = "luna" },
   },
 }
