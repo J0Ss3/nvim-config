@@ -5,10 +5,11 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 # Requirements
 
- - VIM v0.12.44
+- VIM v0.12.44
 - Nerd Font
 
 # Install
+
 
 ```sh
 git clone https://github.com/J0Ss3/nvim-config.git ~/.config/nvim
